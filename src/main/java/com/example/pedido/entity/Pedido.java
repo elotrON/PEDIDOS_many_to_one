@@ -1,12 +1,9 @@
 package com.example.pedido.entity;
 
 import jakarta.persistence.*;
-import org.springframework.context.annotation.Import;
 
+import java.time.LocalDateTime;
 import java.util.*;
-import com.example.pedido.model.EstadoPedido;
-
-import javax.sound.sampled.Line;
 
 @Entity
 public class Pedido {
@@ -16,7 +13,7 @@ public class Pedido {
     private Integer id;
 
     @Column
-    private Date fecha;
+    private LocalDateTime timestamp;
 
     @Column
     private EstadoPedido estadoPedido;
@@ -60,20 +57,24 @@ public class Pedido {
         this.estadoPedido = estadoPedido;
     }
 
-    public Date getFecha() {
-        return fecha;
+    public LocalDateTime getTimestamp() {
+        return timestamp;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public void setTimestamp(LocalDateTime fecha) {
+        this.timestamp = fecha;
     }
 
     public Integer getId() {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public String getAnotacion() {
+        return anotacion;
+    }
+
+    public void setAnotacion(String anotacion) {
+        this.anotacion = anotacion;
     }
 
     public List<LineaPedido> getLineas() {
@@ -83,4 +84,5 @@ public class Pedido {
     public void setLineas(List<LineaPedido> lineas) {
         this.lineas = lineas;
     }
+
 }

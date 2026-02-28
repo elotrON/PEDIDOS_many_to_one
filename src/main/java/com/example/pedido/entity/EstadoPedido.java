@@ -1,4 +1,4 @@
-package com.example.pedido.model;
+package com.example.pedido.entity;
 
 public enum EstadoPedido {
     PENDIENTE,
