@@ -30,7 +30,7 @@ public class ServicePedido {
 
         pedido.setAnotacion(pedidoRequest.getAnotacion());
         pedido.setEstadoPedido(EstadoPedido.PENDIENTE);
-        pedido.setTimestamp( LocalDateTime.now() );
+        pedido.setFecha( LocalDateTime.now() );
         pedido.setCliente( pedidoRequest.getCliente() );
 
         return toResponse(pedidoBBDD.save(pedido));
@@ -90,7 +90,7 @@ public class ServicePedido {
         response.setAnotacion(pedido.getAnotacion());
         response.setEstadoPedido(pedido.getEstadoPedido());
         response.setCliente(pedido.getCliente());
-        response.setTimestamp( pedido.getTimestamp());
+        response.setTimestamp( pedido.getFecha());
 
         return response;
     }

@@ -13,9 +13,10 @@ public class Pedido {
     private Integer id;
 
     @Column
-    private LocalDateTime timestamp;
+    private LocalDateTime fecha;
 
     @Column
+    @Enumerated(EnumType.STRING)
     private EstadoPedido estadoPedido;
 
     @Column
@@ -57,12 +58,12 @@ public class Pedido {
         this.estadoPedido = estadoPedido;
     }
 
-    public LocalDateTime getTimestamp() {
-        return timestamp;
+    public LocalDateTime getFecha() {
+        return fecha;
     }
 
-    public void setTimestamp(LocalDateTime fecha) {
-        this.timestamp = fecha;
+    public void setFecha(LocalDateTime fecha) {
+        this.fecha = fecha;
     }
 
     public Integer getId() {
