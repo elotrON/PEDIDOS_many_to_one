@@ -71,10 +71,9 @@ public class ServicePedido {
      * @param id
      * @return
      */
-    public PedidoResponse getAvisoId(int id){
-
-        //todo
-        return null;
+    public PedidoResponse getPedidoId(int id){
+        Pedido pedido = pedidoBBDD.getReferenceById(id);
+        return toResponse(pedido);
     }
 
 

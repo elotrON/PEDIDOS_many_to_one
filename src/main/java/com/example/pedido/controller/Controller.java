@@ -16,10 +16,7 @@ public class Controller {
 
     @GetMapping("/pedido/{id}")
     public PedidoResponse pedido(@PathVariable int id){
-
-
-        //todo
-        return null;
+        return service.getPedidoId(id);
     }
 
 
