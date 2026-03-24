@@ -83,7 +83,6 @@ public class Controller {
     @DeleteMapping("/pedidos/{id}/lineas/{lineaId}")
     public void borrarLinea(@RequestBody Integer id, @RequestBody int lineaId){
 
-
     }
 
     // DELETE  /pedidos/{id}                → borrar pedido
@@ -111,7 +110,6 @@ public class Controller {
 
         return pedidoResponse;
     }
-
 
 
 }

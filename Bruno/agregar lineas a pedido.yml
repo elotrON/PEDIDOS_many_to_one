@@ -1,0 +1,23 @@
+info:
+  name: agregar lineas a pedido
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/pedidos/3/lineas"
+  body:
+    type: json
+    data: |
+      {
+        
+        "articulo": "Caramelos fresa",
+        "cantidad": "8"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,22 @@
+info:
+  name: Nuevo pedido
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/pedidos"
+  body:
+    type: json
+    data: |-
+      {
+        "anotacion": "San Remo",
+        "cliente": "Mari puri"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
